@@ -2,7 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
 const massive = require('massive');
+const am = require('./authMiddleware');
 const ac = require('./authController');
+const lc = require('./listingController');
 
 const app = express();
 
@@ -27,6 +29,8 @@ app.post('/auth/register', ac.register);
 app.post('/auth/login', ac.login);
 
 app.get('/auth/logout', ac.logout);
+
+app.get('/api/listings', am.usersOnly, lc.getAll);
 
 
 

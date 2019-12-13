@@ -2,6 +2,7 @@
   "name": "houser",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "main": "server/index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -15,7 +16,9 @@
     "massive": "^6.1.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0"
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "redux": "^4.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
