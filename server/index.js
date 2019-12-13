@@ -24,6 +24,10 @@ app.use(
 
 app.post('/auth/register', ac.register);
 
+app.post('/auth/login', ac.login);
+
+app.get('/auth/logout', ac.logout);
+
 
 
 app.listen(SERVER_PORT, () => console.log(`Server listening on port: ${SERVER_PORT}`));
